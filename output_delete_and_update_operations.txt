@@ -1,0 +1,67 @@
+STEP 7: performing update and delete operations
+
+1)adding new column in orders table
+
+3	27	14:52:08	alter table orders add column status varchar(50)	0 row(s) affected
+ Records: 0  Duplicates: 0  Warnings: 0	0.922 sec
+
+2)setting the default value as pending in status column in orders table
+
+3	28	15:00:22	alter table orders modify status varchar(50) default ' pending'	0 row(s) affected
+ Records: 0  Duplicates: 0  Warnings: 0	0.110 sec
+
+3)Displaying the orders table before updating
+
+order_id	customer_id	order_date		total_amount	status	
+
+1		1		2025-09-06 20:20:06	55300.00	null
+2		2		2025-09-06 20:20:06	1700.00		null
+3		3		2025-09-06 20:20:06	30800.00	null
+4		4		2025-09-06 20:20:06	2500.00		null
+5		5		2025-09-06 20:20:06	4800.00		null
+6		6		2025-09-06 20:20:06	56000.00	null
+7		7		2025-09-06 20:20:06	700.00		null
+8		8		2025-09-06 20:20:06	46200.00	null
+9		9		2025-09-06 20:20:06	6200.00		null
+10		10		2025-09-06 20:20:06	800.00		null
+
+4)Updating the status column as pending
+
+order_id	customer_id	order_date		total_amount	status	
+
+1		1		2025-09-06 20:20:06	55300.00	Pending
+2		2		2025-09-06 20:20:06	1700.00		Pending
+3		3		2025-09-06 20:20:06	30800.00	Pending
+4		4		2025-09-06 20:20:06	2500.00		Pending
+5		5		2025-09-06 20:20:06	4800.00		Pending
+6		6		2025-09-06 20:20:06	56000.00	Pending
+7		7		2025-09-06 20:20:06	700.00		Pending
+8		8		2025-09-06 20:20:06	46200.00	Pending
+9		9		2025-09-06 20:20:06	6200.00		Pending
+10		10		2025-09-06 20:20:06	800.00		Pending
+
+5)Deleting a row in orders table
+
+order_id	customer_id	order_date		total_amount	status
+
+1		1		2025-09-06 20:20:06	55300.00	Pending
+2		2		2025-09-06 20:20:06	1700.00		Pending
+3		3		2025-09-06 20:20:06	30800.00	Pending
+4		4		2025-09-06 20:20:06	2500.00		Pending
+5		5		2025-09-06 20:20:06	4800.00		Pending
+6		6		2025-09-06 20:20:06	56000.00	Pending
+7		7		2025-09-06 20:20:06	700.00		Pending
+8		8		2025-09-06 20:20:06	46200.00	Pending
+9		9		2025-09-06 20:20:06	6200.00		Pending
+				
+6)subquery(Finding customers who spent more than average order amount)
+
+customer_id	name		total_amount
+
+1		John Doe	55300.00
+3		Priya Sharma	30800.00
+6		Arun Kumar	56000.00
+8		Deepa M		46200.00
+
+				
+				

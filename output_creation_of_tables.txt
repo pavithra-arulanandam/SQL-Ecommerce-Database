@@ -1,0 +1,68 @@
+STEP 1: creating the database 
+3	1	18:58:36	CREATE  database ecommerce_db	1 row(s) affected	0.125 sec
+
+STEP 2: use the database
+3	7	19:01:48	USE ecommerce_db	0 row(s) affected	0.000 sec
+
+STEP 3: creating the required tables
+3	16	19:09:11	CREATE TABLE Customers (
+     customer_id INT AUTO_INCREMENT PRIMARY KEY,
+     name VARCHAR(100),
+     email VARCHAR(100) UNIQUE,
+     phone VARCHAR(15),
+     address VARCHAR(255)
+ )	0 row(s) affected	1.313 sec
+
+3	27	19:13:23	CREATE TABLE Categories (
+     category_id INT AUTO_INCREMENT PRIMARY KEY,
+     category_name VARCHAR(100)
+ )	0 row(s) affected	0.344 sec
+
+3	30	19:14:37	CREATE TABLE Products (
+     product_id INT AUTO_INCREMENT PRIMARY KEY,
+     product_name VARCHAR(100),
+     category_id INT,
+     price DECIMAL(10,2),
+     stock INT,
+     FOREIGN KEY (category_id) REFERENCES Categories(category_id)
+ )	0 row(s) affected	0.516 sec
+
+3	33	19:15:31	CREATE TABLE Orders (
+     order_id INT AUTO_INCREMENT PRIMARY KEY,
+     customer_id INT,
+     order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+     total_amount DECIMAL(10,2),
+     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+ )	0 row(s) affected	0.984 sec
+
+3	36	19:16:33	CREATE TABLE Order_Items (
+     order_item_id INT AUTO_INCREMENT PRIMARY KEY,
+     order_id INT,
+     product_id INT,
+     quantity INT,
+     price DECIMAL(10,2),
+     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+     FOREIGN KEY (product_id) REFERENCES Products(product_id)
+ )	0 row(s) affected	0.641 sec
+
+3	39	19:17:17	CREATE TABLE Payments (
+     payment_id INT AUTO_INCREMENT PRIMARY KEY,
+     order_id INT,
+     amount DECIMAL(10,2),
+     payment_method VARCHAR(50),
+     payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+     FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+ )	0 row(s) affected	0.422 sec
+
+STEP 4: checking the tables
+------------------------
+Tables_in_ecommerce_db  
+------------------------
+categories
+customers
+order_items
+orders
+payments
+products
+------------------------
+

@@ -1,0 +1,111 @@
+STEP 6: showcasing queries:-
+
+1) listing all the customers:
+
+customer_id	name		email			phone		address
+
+1		John Doe	john@example.com	9876543210	Chennai
+2       	Pavithra A	pavi@example.com	9876501234	Bangalore
+3		Priya Sharma	priya@example.com	9876509876	Delhi
+4		Rahul Verma	rahul@example.com	9123456780	Mumbai
+5		Sneha R	        sneha@example.com	9345678910	Hyderabad
+6		Arun Kumar	arun@example.com	9567891230	Pune
+7		Kiran S	        kiran@example.com	9786543210	Kolkata
+8		Deepa M	        deepa@example.com	9678901234	Chennai
+9		Anjali T	anjali@example.com	9765432109	Bangalore
+10		Vikram N	vikram@example.com	9654321098	Delhi
+
+2)showing all the products with the category name
+
+product_name    category_name		price		stock
+
+Laptop	        Electronics		55000.00	10
+Smartphone	Electronics		30000.00	20
+Headphones	Electronics		2000.00	        50
+T-shirt	        Clothing		500.00	        100
+Jeans	        Clothing		1200.00		60
+Jacket	        Clothing		2500.00		40
+Novel	        Books	        	300.00		80
+Textbook	Books	        	800.00		50
+Mixer Grinder	Home Appliances		3500.00		25
+Air Conditioner	Home Appliances		45000.00	15
+Lipstick	Beauty & Health		700.00		60
+Face Cream	Beauty & Health		1200.00		40
+
+3) total number of orders
+
+total_orders
+
+10
+
+4)Finding top 3 most expensive products 
+
+product_name	price
+
+Laptop	 	55000.00
+Air Conditioner	45000.00
+Smartphone	30000.00
+
+5)Finding total sales (sum of all payments)
+
+total_sales
+
+205000.00
+
+6)Finding best selling product(by quantity)
+
+product_name	total_sold
+
+T-shirt		6
+
+7)showcasing all orders with customer name
+
+oder_id		name		total_amount	order_date
+
+1		John Doe	55300.00	2025-09-06 20:20:06
+2		Pavithra A	1700.00		2025-09-06 20:20:06
+3		Priya Sharma	30800.00	2025-09-06 20:20:06
+4		Rahul Verma	2500.00		2025-09-06 20:20:06
+5		Sneha R		4800.00		2025-09-06 20:20:06
+6		Arun Kumar	56000.00	2025-09-06 20:20:06
+7		Kiran S		700.00		2025-09-06 20:20:06
+8		Deepa M		46200.00	2025-09-06 20:20:06
+9		Anjali T	6200.00		2025-09-06 20:20:06
+10		Vikram N	800.00		2025-09-06 20:20:06
+
+8)finding the total spending of each customer
+
+name		total_spent
+
+Arun Kumar	56000.00
+John Doe	55300.00
+Deepa M		46200.00
+Priya Sharma	30800.00
+Anjali T	6200.00
+Sneha R		4800.00
+Rahul Verma	2500.00
+Pavithra A	1700.00
+Vikram N	800.00
+Kiran S		700.00
+
+9) payment method distribution
+
+payment_method		total_transactions
+
+Credit Card		2
+Cash			3
+UPI			2
+Debit Card		2
+Net Banking		1
+
+10)category-wise sales revenue
+
+category_name		revenue
+
+Electronics		140000.00
+Home Appliances		48500.00
+Clothing		7900.00
+Beauty & Health		5200.00
+Books			2500.00
+
+				
